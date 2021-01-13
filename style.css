@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --background-gradient: linear-gradient(45deg, #8e2de2, #4a00e0);
+    --button-gradient-hover: linear-gradient(to right, #4776E6, #8e54e9);
+    --social-media-twitter: linear-gradient(to right, #56a7f2, #468aca);
+    --social-media-twitter-hover: #468aca;
+    --social-media-facebook: linear-gradient(to right, #1e3c72, #2a5298);
+    --social-media-facebook-hover: #1e3c72;
+}
+
+body {
+    background: var(--background-gradient);
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    min-width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container {
+    background: white;
+    max-width: 350px;
+    min-height: 40vh;
+
+    padding: 2rem;
+    border-radius: 5%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+main h2 {
+    font-weight: 600;
+
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+main h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+
+    border-radius: 8px;
+    background: var(--background-gradient);
+}
+
+/* Form stylization = */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+
+    height: 1px;
+    width: 100%;
+    
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+
+    height: 1px;
+    width: 100%;
+    
+    bottom: -5px;
+    left: 0;
+
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    transform: scaleX(0);
+
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+.input-field input {
+    outline: none;
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.input-field input::placeholder {
+    color:rgba(0, 0, 0, 0.5)
+}
+
+form input[type="submit"] {
+    margin-top: 1rem;
+    padding: .4rem;
+    background: linear-gradient(to left, #4776E6, #8e54e9);
+
+    cursor: pointer;
+
+    color: white;
+    font-size: .9rem;
+    font-weight: 400;
+    
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+form input[type="submit"]:hover {
+    letter-spacing: .5px;
+    background: var(--button-gradient-hover);
+}
+
+form .stay-connected {
+    margin-top: 0.8rem;
+    padding: .4rem 0;
+}
+
+form .stay-connected input{
+    width: 15px;
+}
+
+form .stay-connected label {
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.7rem;
+}
+
+.footer span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: .8rem;
+    text-align: center;
+}
+
+.footer .social-field {
+    padding: .4rem;
+    width: 100%;
+    margin-top: 0.6rem;
+    border-radius: 4px;
+    
+    font-size: .85rem;
+    cursor: pointer;
+}
+
+.footer.subtitle {
+    font-weight: 400;
+}
+
+.footer .social-field a i {
+    margin: 0 .5rem;
+    width: 15px;
+}
+
+.footer .social-field a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .social-field.twitter {
+    transition: all .3s ease;
+    background: var(--social-media-twitter);
+}
+
+.footer .social-field.twitter:hover {
+
+    transition: all .3s ease;
+
+    letter-spacing: .3px;
+    background: var(--social-media-twitter-hover);
+}
+
+.footer .social-field.facebook {
+    transition: all .3s ease;
+    background: var(--social-media-facebook);
+}
+
+.footer .social-field.facebook:hover {
+    transition: all .3s ease;
+
+    letter-spacing: .2px;
+    background: var(--social-media-facebook-hover)
+}
+
+/* --- MELHORIAS 
+ 
+- Checkbox - stay connected
+- :hover effect on social-media buttons 
+
+--- */

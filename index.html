@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">   
+
+</head>
+<body>
+    <main class="container">
+        <h2>Login</h2>
+        <form action="">
+            <div class="input-field" >
+                <input type="text" name="username" id="username" placeholder="Enter your username" required
+                pattern="[a-zA-Z0-9.!#$%&’+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)" title="Invalid email format. Please, try a valid email address."> 
+
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <input type="password" name="password" id="password" placeholder="Enter your password" 
+                required minlength="4" maxlength="10" 
+                title="Your password has to have minimun of 4 chars and maximun of 10 chars.">
+
+                <div class="underline"></div>
+            </div>
+
+            <div class="stay-connected">
+                <input type="checkbox" id="stay-connected" name="stay-connected">
+                <label for="stay-connected">Stay connected</label>
+
+            </div>
+
+            <input type="submit" value="Continue">
+        </form>
+
+        <div class="footer">
+            <span class="footer subtitle">Or connect with social media:</span>
+            
+            <div class="social-fields">
+                <div class="social-field twitter">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                        Sign in with Twitter
+                    </a>
+                </div>
+
+                <div class="social-field facebook">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                        Sign in with Facebook
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+</body>
+</html>
