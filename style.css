@@ -8,11 +8,13 @@
 
 :root {
     --background-gradient: linear-gradient(45deg, #8e2de2, #4a00e0);
+    --button-gradient: linear-gradient(to left, #4776E6, #8e54e9);
     --button-gradient-hover: linear-gradient(to right, #4776E6, #8e54e9);
     --social-media-twitter: linear-gradient(to right, #56a7f2, #468aca);
-    --social-media-twitter-hover: #468aca;
+    --social-media-twitter-hover: linear-gradient(to left, #56a7f2, #468aca);
     --social-media-facebook: linear-gradient(to right, #1e3c72, #2a5298);
-    --social-media-facebook-hover: #1e3c72;
+    --social-media-facebook-hover: linear-gradient(to left, #1e3c72, #2a5298);
+    
 }
 
 body {
@@ -94,7 +96,7 @@ form .input-field:first-child {
     bottom: -5px;
     left: 0;
 
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background: var(--background-gradient);
     transform: scaleX(0);
 
     transition: all .3s ease-in-out;
@@ -118,7 +120,7 @@ form .input-field:first-child {
 form input[type="submit"] {
     margin-top: 1rem;
     padding: .4rem;
-    background: linear-gradient(to left, #4776E6, #8e54e9);
+    background: var(--button-gradient);
 
     cursor: pointer;
 
@@ -188,26 +190,29 @@ form .stay-connected label {
 }
 
 .footer .social-field.twitter {
+    -ms-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
     transition: all .3s ease;
     background: var(--social-media-twitter);
 }
 
 .footer .social-field.twitter:hover {
-
-    transition: all .3s ease;
-
-    letter-spacing: .3px;
+    letter-spacing: .2px;
     background: var(--social-media-twitter-hover);
 }
 
 .footer .social-field.facebook {
+    -ms-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
     transition: all .3s ease;
     background: var(--social-media-facebook);
 }
 
 .footer .social-field.facebook:hover {
-    transition: all .3s ease;
-
     letter-spacing: .2px;
     background: var(--social-media-facebook-hover)
 }
